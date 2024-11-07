@@ -1,0 +1,132 @@
+body, html {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url(Images/bg-image.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+
+/* Input field and search button styling */
+.form-control.input-custom, .search-btn {
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  font-size: 1.2rem;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+}
+
+/* Main weather display */
+.weather-main {
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Glass card styling */
+.main .glass-card {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  transition: transform 0.2s ease-in-out;
+  padding: 25px;
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  transition: transform 0.2s ease-in-out;
+  padding: 25px;
+  margin: 10px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+/* Hover effect */
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Weather icon settings */
+.weather-icon {
+  width: 140px;
+  height: 140px;
+}
+
+/* Text size for city name */
+.city-name {
+  font-size: 3rem;
+}
+
+/* Card title and text */
+.card-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1.2rem;
+}
+
+/* Emoji size for temperature display */
+#temp-emoji {
+  font-size: 2.2rem;
+}
+
+/* Time display styling */
+#current-time {
+  font-size: 1.1rem;
+  color: #ffebcd;
+  margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .city-name {
+      font-size: 2.5rem;
+  }
+  .weather-main {
+      max-width: 100%; /* Make it responsive */
+  }
+  .card-title {
+      font-size: 1.1rem;
+  }
+  .card-text {
+      font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .input-custom {
+      font-size: 1rem; /* Smaller input font size */
+  }
+  .search-btn {
+      font-size: 0.9rem; /* Smaller button font size */
+  }
+  html,body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .glass-card {
+    margin-left: 20%;
+  }
+  .form-control.input-custom, .search-btn {
+    margin-left: 1rems;
+  }
+}

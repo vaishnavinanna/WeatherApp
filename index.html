@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Weather App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="Images/FaviconWeather.png" type="image/x-icon">
+</head>
+
+<body id="bg">
+    <div class="container-fluid overlay-container d-flex flex-column justify-content-center align-items-center text-center">
+        <form class="col-md-8 col-lg-5 m-auto">
+            <div class="input-group mb-3">
+                <input id="city-name" type="text" class="form-control input-custom" placeholder="Enter city for weather..." aria-label="City name" required>
+                <div class="input-group-append">
+                    <button id="btn1" type="button" class="btn btn-danger search-btn">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="main">
+            <div class="weather-main my-4 glass-card p-4">
+                <img id="image-icon" class="weather-icon mb-3" src="https://openweathermap.org/img/wn/02d@2x.png" alt="Weather Icon">
+                <div class="div" style="display: flex; flex-direction: row;">
+                    <h1 id="city" class="city-name display-4">City</h1><h1><sub class="h1">,</sub></h1><h1 class="city-name display-4" id="country" style="float: right;">Country<h1>
+                </div>
+                <!-- <h1 id="city" class="city-name display-4">City,<p id="country" style="float: right;">Country</p></h1> -->
+                <!-- <h3 id="temp">0&deg;C <span id="temp-emoji">🥵</span></h3> -->
+                 <div class="div" style="display: flex; flex-direction: row;">
+                        <h2 id="temp" class="h2">0</h2>
+                            <h3>
+                                <sup>&deg;</sup>C <span id="temp-emoji">🥵</span>
+                            </h3>
+                 </div>
+                 <!-- <h3 id="temp">0 <span>&deg;</span></h3> -->
+                <h4 id="weather" class="lead mt-3">Cloudy</h4>
+                <p id="current-time" class="text-light mb-0"></p>
+            </div>
+        </div>
+
+        <!-- Weather Detail Cards -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-sm-6 col-md-4 col-lg-2 mb-3">
+                <div class="card glass-card p-3">
+                    <h5 class="card-title">Humidity</h5>
+                    <!-- <p class="card-text"><h3 id="humidity">0</h3>% 💧</p> -->
+                     <div class="div" style="display: flex; flex-direction: row;">
+                        <p class="card-text"><h1 id="humidity">0</h1>&nbsp;<h1> % 💧</h1> </p>
+                     </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mb-3">
+                <div class="card glass-card p-3">
+                    <h5 class="card-title">Wind Speed</h5>
+                    <div class="div" style="display: flex; flex-direction: row;">
+                        <p class="card-text"><h1 id="wind-speed">0</h1>&nbsp;<h1> % 🌬️</h1> </p>
+                     </div>
+                    <!-- <p class="card-text"><span id="wind-speed">0</span> m/s 🌬️</p> -->
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mb-3">
+                <div class="card glass-card p-3">
+                    <h5 class="card-title">Min Temperature</h5>
+                    <div class="div" style="display: flex; flex-direction: row;">
+                        <p class="card-text"><h1 id="temp-min">0</h1>&nbsp;<h1> &deg;C 🌡️</h1> </p>
+                     </div>
+                    <!-- <p class="card-text"><span id="temp-min">0</span>&deg;C 🌡️</p> -->
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mb-3">
+                <div class="card glass-card p-3">
+                    <h5 class="card-title">Max Temperature</h5>
+                    <div class="div" style="display: flex; flex-direction: row;">
+                        <p class="card-text"><h1 id="temp-max">0</h1>&nbsp;<h1> &deg;C 🌞</h1> </p>
+                     </div>
+                    <!-- <p class="card-text"><span id="temp-max">0</span>&deg;C 🌞</p> -->
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mb-3">
+                <div class="card glass-card p-3">
+                    <h5 class="card-title">Sunrise</h5>
+                    <div class="div" style="display: flex; flex-direction: row;">
+                        <p class="card-text"><h1 id="sunrise">0</h1>&nbsp;<h1>🌅</h1> </p>
+                     </div>
+                    <!-- <p class="card-text"><span id="sunrise">0 AM</span> 🌅</p> -->
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mb-3">
+                <div class="card glass-card p-3">
+                    <h5 class="card-title">Sunset</h5>
+                    <div class="div" style="display: flex; flex-direction: row;">
+                        <p class="card-text"><h1 id="sunset">0</h1>&nbsp;<h1>🌇</h1> </p>
+                     </div>
+                    <!-- <p class="card-text"><span id="sunset">0 PM</span> 🌇</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
